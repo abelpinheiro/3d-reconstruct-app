@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/camera_id_item"
+        android:title="Configurações da câmera" />
+    <item android:id="@+id/camera_size_item"
+        android:title="Tamanho da imagem" />
+</menu>

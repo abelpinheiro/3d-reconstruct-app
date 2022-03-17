@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/disparitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mapa de disparidade"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/first_img_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:text="Primeira imagem"
+        app:layout_constraintTop_toBottomOf="@id/imageViewResult"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/second_img_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        android:text="Segunda imagem"
+        app:layout_constraintTop_toBottomOf="@id/imageViewResult"
+        app:layout_constraintStart_toStartOf="@id/imageViewRight"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Galeria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLeft" />
+
+    <Button
+        android:id="@+id/sfm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reconstruir"
+        android:onClick="performSfm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abrir camera"
+        android:onClick="openCamera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sfm" />
+
+
+    <ImageView
+        android:id="@+id/imageViewLeft"
+        android:layout_width="0dp"
+        android:layout_height="244dp"
+        android:layout_marginBottom="487dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/imageViewRight"
+        app:layout_constraintTop_toBottomOf="@id/first_img_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="?android:attr/fastScrollTrackDrawable" />
+
+    <ImageView
+        android:id="@+id/imageViewRight"
+        android:layout_width="0dp"
+        android:layout_height="244dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imageViewLeft"
+        app:layout_constraintTop_toBottomOf="@id/second_img_label"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="?android:attr/fastScrollTrackDrawable" />
+
+    <ImageView
+        android:id="@+id/imageViewResult"
+        android:layout_width="0dp"
+        android:layout_height="244dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/disparitylabel"
+        app:srcCompat="?android:attr/fastScrollTrackDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
